@@ -1,0 +1,40 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Proyecto
+
+Sitio personal de Jorgelina Alvarez ("Astrolina"), meteoróloga y astrofotógrafa argentina: biografía, salidas/expediciones, talleres, comunidad ("La Tribu"), divulgación, libros y fotos. Más adelante va a necesitar un backend para que ella cargue su propio contenido; por ahora es un front estático y se mantiene simple a propósito. El contenido del sitio y la comunicación con el dueño del repo son en español (rioplatense).
+
+- Requisitos y tareas: Jira, proyecto **AS** en `palazzisoft.atlassian.net` (accesible vía el MCP `atlassian`). Los commits llevan la clave del issue (`AS-2: ...`).
+- Diseño base: prototipo en **AS-2** (imagen adjunta; el MCP no descarga adjuntos). El diseño puede cambiar con el tiempo.
+
+## Comandos
+
+```bash
+npm run dev       # dev server en http://localhost:5173
+npm run build     # tsc -b (type-check) + vite build -> dist/
+npm run lint      # eslint
+npm run preview   # sirve dist/
+```
+
+No hay tests todavía. Verificar cambios visuales levantando el sitio y comparando con el prototipo.
+
+Node local es 18.19: por eso Vite está en 6.x (Vite 7 requiere Node 20.19+). No subir de major sin actualizar Node.
+
+## Arquitectura
+
+Vite + React 19 + TypeScript, una sola página sin router.
+
+- `src/index.css`: tokens de diseño en `:root` (`--color-night`, `--color-gold`, `--color-star`, `--color-muted`, ...), fondo nocturno con gradientes y el campo de estrellas (`body::before`, posiciones tomadas del prototipo). Cambios de paleta van acá.
+- `src/components/SiteHeader.tsx`: logo + menú. `NAV_ITEMS` define las secciones; los links son anclas (`#quien-soy`, `#salidas`, ...) que deben coincidir con el `id` de cada sección en la página.
+- Estilos por componente con CSS Modules (`*.module.css`); sin librería de UI ni Tailwind.
+- Tipografía Newsreader desde Google Fonts (`index.html`).
+
+## Material de referencia (`docs/`)
+
+Documentos que aporta el dueño del proyecto (contenido real de Jorgelina). Leerlos a demanda, no hace falta cargarlos siempre:
+
+- `1º EXPEDICIÓN OCTUBRE EN alto jague (1).pdf`: expedición a Alto Jague; al final incluye su presentación personal ("Hola, soy Jorgelina Alvarez...").
+- `Alto_Jague_Guia_del_Cielo.pdf`, `Guia-Fotografica-Alto-Jague-la-Tribu.pdf`: guías de las salidas.
+- `alto jague folleto`: imagen JPEG (sin extensión) del folleto.
