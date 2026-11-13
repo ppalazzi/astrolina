@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Material de referencia privado (PDFs e imágenes de Jorgelina)
+docs/

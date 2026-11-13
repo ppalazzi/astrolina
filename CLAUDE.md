@@ -37,7 +37,7 @@ Vite + React 19 + TypeScript, SPA con `react-router-dom` v6 (la v7+ pide Node 20
 
 ## Material de referencia (`docs/`)
 
-Documentos que aporta el dueño del proyecto (contenido real de Jorgelina). Leerlos a demanda, no hace falta cargarlos siempre:
+Documentos que aporta el dueño del proyecto (contenido real de Jorgelina). Está en `.gitignore` a propósito: el repo es público y estos archivos tienen datos personales y comerciales. Las imágenes que se usen en el sitio se copian a `src/assets/`. Leerlos a demanda, no hace falta cargarlos siempre:
 
 - `1º EXPEDICIÓN OCTUBRE EN alto jague (1).pdf`: expedición a Alto Jague; al final incluye su presentación personal ("Hola, soy Jorgelina Alvarez...").
 - `Alto_Jague_Guia_del_Cielo.pdf`, `Guia-Fotografica-Alto-Jague-la-Tribu.pdf`: guías de las salidas.
