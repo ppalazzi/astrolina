@@ -1,12 +1,13 @@
 import portrait from "../assets/jorgelina-camara.jpg";
 import styles from "./AboutSection.module.css";
+import section from "./Section.module.css";
 
 // Texto: presentación de Jorgelina en docs/1º EXPEDICIÓN OCTUBRE EN alto jague (1).pdf
 export default function AboutSection() {
   return (
-    <section id="quien-soy" className={styles.section}>
-      <p className={styles.eyebrow}>Quién soy</p>
-      <h2 className={styles.title}>
+    <section id="quien-soy" className={section.section}>
+      <p className={section.eyebrow}>Quién soy</p>
+      <h2 className={section.title}>
         Hola, soy <em>Jorgelina Alvarez</em>
       </h2>
 

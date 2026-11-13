@@ -1,4 +1,5 @@
 import AboutSection from "./components/AboutSection";
+import OutingsSection from "./components/OutingsSection";
 import SiteHeader from "./components/SiteHeader";
 
 export default function App() {
@@ -7,6 +8,7 @@ export default function App() {
       <SiteHeader />
       <main>
         <AboutSection />
+        <OutingsSection />
       </main>
     </>
   );

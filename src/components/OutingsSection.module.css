@@ -1,0 +1,14 @@
+.meta {
+  margin: -1rem 0 2rem;
+  color: var(--color-muted);
+  font-size: 1.25rem;
+}
+
+.flyer {
+  display: block;
+  width: 100%;
+  max-width: 34rem;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 0.45);
+}
