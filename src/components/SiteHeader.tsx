@@ -1,28 +1,25 @@
+import { Link, NavLink } from "react-router-dom";
+import { NAV_ITEMS } from "../site";
 import styles from "./SiteHeader.module.css";
-
-const NAV_ITEMS = [
-  { label: "Quién soy", href: "#quien-soy" },
-  { label: "Salidas", href: "#salidas" },
-  { label: "Talleres", href: "#talleres" },
-  { label: "La Tribu", href: "#la-tribu" },
-  { label: "Divulgación", href: "#divulgacion" },
-  { label: "Libros", href: "#libros" },
-  { label: "Contacto", href: "#contacto" },
-];
 
 export default function SiteHeader() {
   return (
     <header className={styles.header}>
-      <a href="/" className={styles.brand}>
+      <Link to="/" className={styles.brand}>
         Jorgelina <span className={styles.accent}>· Astrolina</span>
-      </a>
+      </Link>
       <nav aria-label="Principal">
         <ul className={styles.menu}>
           {NAV_ITEMS.map((item) => (
-            <li key={item.href}>
-              <a href={item.href} className={styles.link}>
+            <li key={item.path}>
+              <NavLink
+                to={item.path}
+                className={({ isActive }) =>
+                  isActive ? `${styles.link} ${styles.active}` : styles.link
+                }
+              >
                 {item.label}
-              </a>
+              </NavLink>
             </li>
           ))}
         </ul>

@@ -1,15 +1,17 @@
 import portrait from "../assets/jorgelina-camara.jpg";
-import styles from "./AboutSection.module.css";
-import section from "./Section.module.css";
+import { pageTitle } from "../site";
+import styles from "./AboutPage.module.css";
+import page from "./Page.module.css";
 
 // Texto: presentación de Jorgelina en docs/1º EXPEDICIÓN OCTUBRE EN alto jague (1).pdf
-export default function AboutSection() {
+export default function AboutPage() {
   return (
-    <section id="quien-soy" className={section.section}>
-      <p className={section.eyebrow}>Quién soy</p>
-      <h2 className={section.title}>
+    <section className={page.page}>
+      <title>{pageTitle("Quién soy")}</title>
+      <p className={page.eyebrow}>Quién soy</p>
+      <h1 className={page.title}>
         Hola, soy <em>Jorgelina Alvarez</em>
-      </h2>
+      </h1>
 
       <div className={styles.layout}>
         <div className={styles.body}>
@@ -41,7 +43,7 @@ export default function AboutSection() {
           </blockquote>
         </div>
 
-        <figure className={styles.frame}>
+        <figure className={`viewfinder ${styles.frame}`}>
           <img
             src={portrait}
             alt="Jorgelina Alvarez mirando el horizonte junto a su cámara con teleobjetivo, en un paisaje helado"

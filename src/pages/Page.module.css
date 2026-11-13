@@ -1,5 +1,5 @@
-/* Estilos compartidos por las secciones de la página. */
-.section {
+/* Estilos compartidos por las páginas internas. */
+.page {
   max-width: 72rem;
   margin: 0 auto;
   padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 5vw, 7.5rem);
@@ -20,4 +20,11 @@
 
 .title em {
   color: var(--color-gold);
+}
+
+.backLink {
+  color: var(--color-gold);
+  font-size: 1.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }

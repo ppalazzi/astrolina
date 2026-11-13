@@ -24,11 +24,15 @@ Node local es 18.19: por eso Vite está en 6.x (Vite 7 requiere Node 20.19+). No
 
 ## Arquitectura
 
-Vite + React 19 + TypeScript, una sola página sin router.
+Vite + React 19 + TypeScript, SPA con `react-router-dom` v6 (la v7+ pide Node 20+). Cada solapa del menú es una página propia.
 
-- `src/index.css`: tokens de diseño en `:root` (`--color-night`, `--color-gold`, `--color-star`, `--color-muted`, ...), fondo nocturno con gradientes y el campo de estrellas (`body::before`, posiciones tomadas del prototipo). Cambios de paleta van acá.
-- `src/components/SiteHeader.tsx`: logo + menú. `NAV_ITEMS` define las secciones; los links son anclas (`#quien-soy`, `#salidas`, ...) que deben coincidir con el `id` de cada sección en la página.
+- `src/site.ts`: `NAV_ITEMS` (solapas y rutas) y `pageTitle()`. Es la fuente única del menú y de las rutas.
+- `src/App.tsx`: arma el router a partir de `NAV_ITEMS`. Las rutas que no están en `PAGES` muestran `ComingSoonPage`; para construir una solapa nueva, crear la página en `src/pages/` y sumarla a `PAGES`.
+- `src/components/Layout.tsx`: header + `<Outlet />` + `ScrollRestoration`.
+- `src/pages/`: una página por ruta. `Page.module.css` tiene los estilos compartidos (contenedor, etiqueta dorada, título) para que todas las páginas internas se vean iguales. Cada página fija su `<title>` con `pageTitle()` (React 19 lo sube al `<head>`).
+- `src/index.css`: tokens de diseño en `:root` (`--color-night`, `--color-gold`, `--color-star`, `--color-muted`, ...), fondo nocturno con gradientes, campo de estrellas (`body::before`, posiciones del prototipo) y la clase global `.viewfinder` (esquinas de visor del prototipo). Cambios de paleta van acá.
 - Estilos por componente con CSS Modules (`*.module.css`); sin librería de UI ni Tailwind.
+- Hosting: al ser SPA con `BrowserRouter`, el host tiene que servir `index.html` para cualquier ruta (en dev/preview Vite ya lo hace).
 - Tipografía Newsreader desde Google Fonts (`index.html`).
 
 ## Material de referencia (`docs/`)

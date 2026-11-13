@@ -17,12 +17,6 @@ html {
   color-scheme: dark;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-  }
-}
-
 body {
   min-height: 100vh;
   color: var(--color-star);
@@ -59,4 +53,23 @@ body::before {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* Esquinas de visor, como el marco del título en el prototipo (AS-2). */
+.viewfinder {
+  --corner-color: var(--color-star);
+  --corner-size: 2rem;
+  --corner-line: linear-gradient(var(--corner-color), var(--corner-color));
+  background-image:
+    var(--corner-line), var(--corner-line), var(--corner-line), var(--corner-line),
+    var(--corner-line), var(--corner-line), var(--corner-line), var(--corner-line);
+  background-position:
+    top left, top left, top right, top right,
+    bottom left, bottom left, bottom right, bottom right;
+  background-size:
+    var(--corner-size) 2px, 2px var(--corner-size),
+    var(--corner-size) 2px, 2px var(--corner-size),
+    var(--corner-size) 2px, 2px var(--corner-size),
+    var(--corner-size) 2px, 2px var(--corner-size);
+  background-repeat: no-repeat;
 }

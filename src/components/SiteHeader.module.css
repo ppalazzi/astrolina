@@ -31,6 +31,7 @@
 }
 
 .link:hover,
-.link:focus-visible {
+.link:focus-visible,
+.active {
   color: var(--color-gold);
 }
