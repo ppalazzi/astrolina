@@ -32,7 +32,9 @@ Vite + React 19 + TypeScript, SPA con `react-router-dom` v6 (la v7+ pide Node 20
 - `src/pages/`: una página por ruta. `Page.module.css` tiene los estilos compartidos (contenedor, etiqueta dorada, título) para que todas las páginas internas se vean iguales. Cada página fija su `<title>` con `pageTitle()` (React 19 lo sube al `<head>`).
 - `src/index.css`: tokens de diseño en `:root` (`--color-night`, `--color-gold`, `--color-star`, `--color-muted`, ...), fondo nocturno con gradientes, campo de estrellas (`body::before`, posiciones del prototipo) y la clase global `.viewfinder` (esquinas de visor del prototipo). Cambios de paleta van acá.
 - Estilos por componente con CSS Modules (`*.module.css`); sin librería de UI ni Tailwind.
-- Hosting: al ser SPA con `BrowserRouter`, el host tiene que servir `index.html` para cualquier ruta (en dev/preview Vite ya lo hace).
+- Hosting: al ser SPA con `BrowserRouter`, el host tiene que servir `index.html` para cualquier ruta (en dev/preview Vite ya lo hace). Lo que está en `public/` se copia tal cual a `dist/`:
+  - Pruebas en **Cloudflare Pages** (deploy automático desde GitHub, build `npm run build`, salida `dist`). Pages ya hace el fallback de SPA porque no hay `404.html`; `public/_headers` agrega `X-Robots-Tag: noindex` para que no se indexe.
+  - Producción prevista en **DonWeb** (Apache) con el dominio `astrolina.com.ar`: `public/.htaccess` hace el fallback a `index.html`. Se sube el contenido de `dist/` a `public_html`; si va en subcarpeta hay que ajustar `base` en `vite.config.ts`.
 - Tipografía Newsreader desde Google Fonts (`index.html`).
 
 ## Material de referencia (`docs/`)

@@ -1,0 +1,3 @@
+# Solo lo lee Cloudflare Pages (entorno de pruebas): que los buscadores no indexen el sitio.
+/*
+  X-Robots-Tag: noindex
