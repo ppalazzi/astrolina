@@ -23,6 +23,7 @@ const router = createBrowserRouter([
         path: item.path,
         element: PAGES[item.path] ?? <ComingSoonPage title={item.label} />,
       })),
+      { path: "/carrito", element: <ComingSoonPage title="Carrito" /> },
       { path: "*", element: <NotFoundPage /> },
     ],
   },

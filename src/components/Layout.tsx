@@ -1,5 +1,6 @@
 import { Outlet, ScrollRestoration } from "react-router-dom";
 import SiteHeader from "./SiteHeader";
+import WhatsAppButton from "./WhatsAppButton";
 
 export default function Layout() {
   return (
@@ -8,6 +9,7 @@ export default function Layout() {
       <main>
         <Outlet />
       </main>
+      <WhatsAppButton />
       <ScrollRestoration />
     </>
   );
