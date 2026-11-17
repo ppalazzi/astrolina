@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Proyecto
 
-Sitio personal de Jorgelina Alvarez ("Astrolina"), meteoróloga y astrofotógrafa argentina: biografía, salidas/expediciones, talleres, comunidad ("La Tribu"), divulgación, libros y fotos. Más adelante va a necesitar un backend para que ella cargue su propio contenido; por ahora es un front estático y se mantiene simple a propósito. El contenido del sitio y la comunicación con el dueño del repo son en español (rioplatense).
+Sitio personal de Jorgelina Alvarez ("Astrolina"), meteoróloga y astrofotógrafa argentina: biografía, viajes fotográficos (expediciones), cursos, galería de fotos, divulgación y libros. Más adelante va a necesitar un backend para que ella cargue su propio contenido; por ahora es un front estático y se mantiene simple a propósito. El contenido del sitio y la comunicación con el dueño del repo son en español (rioplatense).
 
 - Requisitos y tareas: Jira, proyecto **AS** en `palazzisoft.atlassian.net` (accesible vía el MCP `atlassian`). Los commits llevan la clave del issue (`AS-2: ...`).
 - Diseño base: prototipo en **AS-2** (imagen adjunta; el MCP no descarga adjuntos). El diseño puede cambiar con el tiempo.

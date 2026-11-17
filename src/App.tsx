@@ -11,7 +11,7 @@ import { NAV_ITEMS } from "./site";
 // Páginas ya construidas; el resto de las solapas muestra "Próximamente".
 const PAGES: Record<string, ReactNode> = {
   "/quien-soy": <AboutPage />,
-  "/salidas": <OutingsPage />,
+  "/viajes-fotograficos": <OutingsPage />,
 };
 
 const router = createBrowserRouter([

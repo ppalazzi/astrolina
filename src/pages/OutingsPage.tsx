@@ -6,8 +6,8 @@ import page from "./Page.module.css";
 export default function OutingsPage() {
   return (
     <section className={page.page}>
-      <title>{pageTitle("Salidas")}</title>
-      <p className={page.eyebrow}>Salidas</p>
+      <title>{pageTitle("Viajes Fotográficos")}</title>
+      <p className={page.eyebrow}>Viajes Fotográficos</p>
       <h1 className={page.title}>
         1º Expedición <em>Alto Jagüé</em>
       </h1>

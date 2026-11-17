@@ -15,9 +15,9 @@ export const CONTACT = {
 // Solapas del menú; cada una es una página propia (ver App.tsx).
 export const NAV_ITEMS = [
   { label: "Quién soy", path: "/quien-soy" },
-  { label: "Salidas", path: "/salidas" },
-  { label: "Talleres", path: "/talleres" },
-  { label: "La Tribu", path: "/la-tribu" },
+  { label: "Viajes Fotográficos", path: "/viajes-fotograficos" },
+  { label: "Cursos", path: "/cursos" },
+  { label: "Galería", path: "/galeria" },
   { label: "Divulgación", path: "/divulgacion" },
   { label: "Libros", path: "/libros" },
   { label: "Contacto", path: "/contacto" },
