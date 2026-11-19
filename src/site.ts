@@ -18,6 +18,7 @@ export const NAV_ITEMS = [
   { label: "Viajes Fotográficos", path: "/viajes-fotograficos" },
   { label: "Cursos", path: "/cursos" },
   { label: "Galería", path: "/galeria" },
+  { label: "La Tribu", path: "/la-tribu" },
   { label: "Divulgación", path: "/divulgacion" },
   { label: "Libros", path: "/libros" },
   { label: "Contacto", path: "/contacto" },
